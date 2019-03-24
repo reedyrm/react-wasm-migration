@@ -3,10 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 //import { add, hello, sub } from './utils/CommonUtils';
 
-//const { add, hello, sub } = await import('native');
-
-//import { add, hello, sub } from './external/react_wasm_rust_library';
-
 class App extends Component {
   
   constructor(props) {
@@ -33,8 +29,6 @@ class App extends Component {
   render() {
     const { wasm = {} } = this.state;
     
-    console.log(`wasm keys: ${Object.keys(wasm)}`);
-    
     return (
       <div className="App">
         <header className="App-header">
@@ -56,7 +50,7 @@ class App extends Component {
           </div>
           <div>
             <div>Add: <input type='text' onChange={(e) => this.setState({addNum1: e.target.value})} /> <input type='text' onChange={(e) => this.setState({addNum2: e.target.value})} /></div>
-            <div>Result: { wasm.add && wasm.add(this.state.addNum1 || 0, this.state.addNum2 || 0) }</div>
+            <div>Result: {wasm.add && wasm.add(this.state.addNum1 || 0, this.state.addNum2 || 0) }</div>
           </div>
           <div>
             <div>Sub: <input type='text' onChange={(e) => this.setState({subNum1: e.target.value})} /> <input type='text' onChange={(e) => this.setState({subNum2: e.target.value})} /></div>

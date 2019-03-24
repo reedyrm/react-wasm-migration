@@ -104,3 +104,11 @@ to
 ```
 
 
+### Step 4
+
+Copy .wasm package into a folder
+
+
+### Step 5
+
+The external WASM needs to be loaded asynchnrously via the import.  See `App.js` loadWasm
