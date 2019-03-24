@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +67,38 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+
+
+# Setting up Project to use WebAssembly (.wasm) without ejecting
+Courtesy of https://github.com/ballercat/wasm-loader/issues/3
+
+### Step 1
+Install `react-app-rewired` and `wasm-loader`
+
+Yarn:
+`yarn add react-app-rewired wasm-loader --dev`
+
+NPM:
+`npm install react-app-rewired wasm-loader -D`
+
+### Step 2
+Add a file `config-overrides.js` to root directory
+
+### Step 3
+Change package.json from
+```
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+```
+
+to
+
+```
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+```
