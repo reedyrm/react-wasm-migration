@@ -50,7 +50,7 @@ class App extends Component {
           </div>
           <div>
             <div>Add: <input type='text' onChange={(e) => this.setState({addNum1: e.target.value})} /> <input type='text' onChange={(e) => this.setState({addNum2: e.target.value})} /></div>
-            <div>Result: {wasm.add && wasm.add(this.state.addNum1 || 0, this.state.addNum2 || 0) }</div>
+            <div>Result: { wasm.add && wasm.add(this.state.addNum1 || 0, this.state.addNum2 || 0) }</div>
           </div>
           <div>
             <div>Sub: <input type='text' onChange={(e) => this.setState({subNum1: e.target.value})} /> <input type='text' onChange={(e) => this.setState({subNum2: e.target.value})} /></div>
