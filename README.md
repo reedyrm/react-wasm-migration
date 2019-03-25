@@ -90,17 +90,21 @@ Add a file `config-overrides.js` to root directory
 ### Step 3
 Change package.json from
 ```
+"scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+}
 ```
 
 to
 
 ```
+"scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
+}
 ```
 
 

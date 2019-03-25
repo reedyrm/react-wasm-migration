@@ -3730,7 +3730,7 @@ external-editor@^3.0.0, external-editor@^3.0.3:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-"external@file:./external/rustLibrary":
+"external@file:./external":
   version "0.1.0"
 
 extglob@^0.3.1:
